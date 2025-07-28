@@ -1,3 +1,2721 @@
+/*
+Theme Name: Haruni
+Theme URI: https://blog.hatena.ne.jp/-/store/theme/17391345971624603155
+Description: 春らしいピンクグラデーションのシンプルなレスポンシブデザインテーマです。2カラム。トップページ横長カード型（はてなブログProのみ）タイトル画像は背景透過のシンプルなものが良いと思います。背景色・背景画像かグラデーションを変えることで違った印象にも出来ます。<b>※記事一覧形式ではデフォルト画像でも良いので必ずアイキャッチ画像を設定して下さい。</b>※はてなブログProじゃなくても普通にテーマとして使えます。（カード型の表示にはなりません）無料ユーザーの方は記事に「続きを読む」を付けられることをおすすめします。※PC版でダブルレクタングルのAdSenseが入るように記事幅調整しました。*Demoデモブログ：[https://yumekawa.hatenadiary.com/:title]背景グラデーションはbodyに指定しています。各自お好みのグラデーションに変更出来ます。*記事一覧表示（はてなブログPro向け）はてなブログProの方はトップページを一覧形式にすると横長のカードレイアウトになります。はてなブログProで設定＞詳細設定からトップページの表示形式（PC版） を「一覧形式」します。※記事には必ずアイキャッチ画像を設定して下さい。*カラーバリエーション[f:id:minimalgreen:20180315190748p:plain]はてなブログの管理画面＞デザイン＞カスタマイズ＞背景色からグラデーション部分の背景色は簡単に変更出来ます。[https://yumekawa.hatenadiary.com/entry/2018/03/15/191030:title]*着せ替え用CSS　水色グラデーション※着せ替え用の記事に一部修正があります。2018/3/14以前にコピペされた方は貼り替えをお願いします。[f:id:minimalgreen:20180312020235p:plain]ピンクグラデーションをお好みの色に変えたい場合は以下の記事をご参照下さい。[https://yumekawa.hatenadiary.com/entry/2018/03/12/020610:title]*背景画像を設定をした場合背景画像を設定をすると、グラデーションの部分が写真・画像に置き換わります。また背景画像に重ねてタイトル画像も管理画面のタイトル画像アップロード機能から設定出来ます。[f:id:minimalgreen:20180312031930p:plain]*グローバルメニューの設置方法グローバルメニューの設置は以下の記事をご参照下さい。[https://yumekawa.hatenadiary.com/entry/2018/03/11/205405:title]*オリジナルシェアボタンデモブログと同じシェアボタンの設置方法は↓をどうぞ。[https://yumekawa.hatenadiary.com/entry/2018/03/11/212409:title]*お問い合わせテーマに対するご質問は各デモブログのコメント欄にお願い申し上げます。（メールフォームからの無料のご質問にはお答えできません）[http://blog.minimal-green.com/:title]
+Author: minimalgreen
+Author URI: https://blog.hatena.ne.jp/minimalgreen/
+*/
+@charset "UTF-8";
+
+/*
+  Theme: haruni
+  Theme URI:https://yumekawa.hatenadiary.com/
+  Author: minimalgreen
+  Author URI: http://blog.minimal-green.com/
+  Description:
+  春らしいピンクグラデーションのシンプルなレスポンシブデザインテーマです。2カラム。
+  License: GNU General Public License v3 or later
+  License URI: https://www.gnu.org/licenses/gpl-3.0.ja.html
+  Responsive: yes
+  Based on: https://github.com/hatena/Hatena-Blog-Theme-Boilerplate
+*/
+
+
+/* ---------------------
+    - reset
+    - 一般
+    - ヘッダー周り
+    - メインコンテンツ
+    - フッター周り
+    - その他
+--------------------- */
+
+
+/*-------------------------------
+
+	reset
+
+-------------------------------*/
+
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+
+/* Document
+   ========================================================================== */
+
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+	line-height: 1.15;
+	/* 1 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+}
+
+
+/* Sections
+   ========================================================================== */
+
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+	margin: 0;
+}
+
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+
+/* Grouping content
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main {
+	/* 1 */
+	display: block;
+}
+
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+	margin: 1em 40px;
+}
+
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	/* 1 */
+	height: 0;
+	/* 1 */
+	overflow: visible;
+	/* 2 */
+}
+
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+
+/* Text-level semantics
+   ========================================================================== */
+
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+	background-color: transparent;
+	/* 1 */
+	-webkit-text-decoration-skip: objects;
+	/* 2 */
+}
+
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+	border-bottom: none;
+	/* 1 */
+	text-decoration: underline;
+	/* 2 */
+	-webkit-text-decoration: underline dotted;
+	text-decoration: underline dotted;
+	/* 2 */
+}
+
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+	font-weight: inherit;
+}
+
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+	font-style: italic;
+}
+
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+	background-color: #ff0;
+	color: #000;
+}
+
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+
+/* Embedded content
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+	display: inline-block;
+}
+
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+	border-style: none;
+}
+
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+
+/* Forms
+   ========================================================================== */
+
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: sans-serif;
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
+	margin: 0;
+	/* 2 */
+}
+
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+	/* 1 */
+	overflow: visible;
+}
+
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+	/* 1 */
+	text-transform: none;
+}
+
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+	/* 2 */
+}
+
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/* 1 */
+	color: inherit;
+	/* 2 */
+	display: table;
+	/* 1 */
+	max-width: 100%;
+	/* 1 */
+	padding: 0;
+	/* 3 */
+	white-space: normal;
+	/* 1 */
+}
+
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+	display: inline-block;
+	/* 1 */
+	vertical-align: baseline;
+	/* 2 */
+}
+
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+	overflow: auto;
+}
+
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
+
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
+}
+
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
+}
+
+
+/* Interactive
+   ========================================================================== */
+
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details,
+menu {
+	display: block;
+}
+
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+	display: list-item;
+}
+
+
+/* Scripting
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+	display: inline-block;
+}
+
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+	display: none;
+}
+
+
+/* Hidden
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+	display: none;
+}
+
+
+/*-------------------------------
+
+	一般
+
+-------------------------------*/
+
+html,
+body {
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic';
+	color: #454545;
+	line-height: 1.6;
+}
+
+body {
+	background: -moz-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: -webkit-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: linear-gradient(to right, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	/* 背景グラデーション */
+}
+
+@media (max-width: 1024px) {
+
+	/* 背景画像のスマートフォン調整 */
+	body {
+		background-repeat: repeat !important;
+		background-size: auto !important;
+	}
+}
+
+a {
+	color: #FF989E;
+}
+
+a:hover {
+	color: #1487bd;
+}
+
+a.keyword {
+	text-decoration: none;
+	border-bottom: 1px dotted #ddd;
+	color: #454545;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	line-height: 1.3;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: #333;
+	text-decoration: none;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+	color: #0f668f;
+}
+
+
+/*-------------------------------
+
+	ヘッダー周り
+
+-------------------------------*/
+
+
+/* ヘッダ（グローバルヘッダ）
+  グローバルヘッダの中はiframeですが、
+  #globalheader-container に背景色や文字色を指定することでiframeの中にも色が反映されます。
+*/
+
+#globalheader-container {
+	color: #fff;
+	z-index: 20000;
+}
+
+
+/*-------------------------------
+
+	レイアウト
+
+-------------------------------*/
+
+
+/* container */
+
+#container,
+#footer {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#content {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px 10px;
+	background-color: #f8f8f8;
+	box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+
+	#container,
+	#footer {
+		width: 100%;
+		margin: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#content-inner {
+		width: 700px;
+		margin: 0 auto;
+	}
+
+	#content {
+		width: 100%;
+		margin: 0px auto;
+		padding: 30px;
+		box-sizing: border-box;
+	}
+}
+
+@media (min-width: 900px) {
+	#content-inner {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1142px) {
+
+	#container,
+	#footer {
+		width: 100%;
+		margin: auto;
+	}
+
+	#content {
+		width: 100%;
+		margin: 0px auto;
+		padding: 40px 0;
+	}
+
+	#content-inner {
+		width: 1142px;
+		margin: 0 auto;
+	}
+}
+
+
+/* 2カラムレイアウト */
+
+#content-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+	#content-inner {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 768px) {
+	#wrapper {
+		width: 480px;
+	}
+}
+
+@media (min-width: 900px) {
+	#wrapper {
+		width: 67%;
+	}
+}
+
+@media (min-width: 1142px) {
+	#wrapper {
+		width: 742px;
+	}
+}
+
+@media (min-width: 768px) {
+	#box2 {
+		width: 200px;
+	}
+}
+
+@media (min-width: 900px) {
+	#box2 {
+		width: 30%;
+	}
+}
+
+@media (min-width: 1142px) {
+	#box2 {
+		width: 360px;
+	}
+}
+
+#box2-inner {
+	overflow: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 1141px) {
+	.hatena-module-search-box .search-module-input {
+		width: 150px;
+	}
+}
+
+
+/* 下記のスタイルを適用するとテーマを1カラムレイアウトにできます。
+利用するにはコメントアウトを解除してください。
+（2カラムレイアウトの場合はコメントアウト全体が不要です）
+
+#content-inner {
+    flex-direction: column;
+    align-items: center;
+}
+#wrapper {
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+    @media (min-width: 1142px) {
+        max-width: 720px;
+    }
+}
+#box2 {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+    @media (min-width: 1142px) {
+        width: 100%;
+    }
+}
+
+#box2-inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    @media (min-width: 768px) {
+        margin-left: -20px;
+        flex-direction: row;
+    }
+    @media (min-width: 1142px) {
+        margin-left: -30px;
+    }
+}
+.hatena-module {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 33.3333%;
+    }
+    @media (min-width: 1142px) {
+        padding-left: 30px;
+    }
+}
+
+---- END 1カラム */
+
+
+/*-------------------------------
+
+	ヘッダー周り
+
+-------------------------------*/
+
+
+/* ヘッダ */
+
+#blog-title {
+	margin: 0 auto;
+	text-align: center;
+	padding: 3rem 0;
+	text-align: center;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+	#blog-title {
+		text-align: center;
+	}
+}
+
+@media (max-width: 767px) {
+	#blog-title {
+		margin: 0 auto;
+		text-align: center;
+		padding: 1rem 0;
+	}
+}
+
+#title {
+	margin: 0;
+	font-size: 1.7rem;
+}
+
+@media (min-width: 1142px) {
+	#title {
+		font-size: 200%;
+		;
+	}
+}
+
+#title a {
+	color: #fff;
+	letter-spacing: 1.8px;
+}
+
+#blog-description {
+	font-weight: normal;
+	font-size: .8rem;
+	margin: 1em 0 0;
+	color: #fff;
+}
+
+@media (max-width: 1141px) {
+	#blog-title-content {
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	#blog-title-content {
+		padding: 0 10px;
+	}
+}
+
+
+/* ヘッダ画像を設定したとき */
+
+.header-image-enable #blog-title {
+	margin: 0 0 2em;
+}
+
+.header-image-enable #blog-title-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+
+.header-image-enable #blog-title-content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* タイトル下HTML */
+
+#top-editarea {
+	margin-bottom: 1em;
+}
+
+
+/* パンくず（カテゴリーページで表示されます） */
+
+#top-box {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 90%;
+}
+
+.breadcrumb {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 40px 20px;
+	text-align: left;
+	text-decoration: none;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+.breadcrumb a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.page-entry .breadcrumb {
+	margin-bottom: 0;
+	padding: 0 20px 20px;
+	box-sizing: border-box;
+}
+
+a.breadcrumb-link:before {
+	font-family: "blogicon";
+	content: "\f017";
+}
+
+a.breadcrumb-child-link:before {
+	font-family: "blogicon";
+	content: "\f04a";
+}
+
+@media (min-width: 768px) {
+	#top-box {
+		font-size: 90%;
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.breadcrumb {
+		width: 700px;
+		padding: 0 0 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.page-entry .breadcrumb {
+		margin-bottom: 0;
+		padding: 0 0 20px;
+		box-sizing: border-box;
+	}
+}
+
+@media (min-width: 900px) {
+	#top-box {
+		width: 90%;
+	}
+
+	.breadcrumb {
+		width: 90%;
+	}
+}
+
+@media (min-width: 1142px) {
+	#top-box {
+		font-size: 90%;
+		width: 1142px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.breadcrumb {
+		width: 1142px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+/*-------------------------------
+
+	メインコンテンツ
+
+-------------------------------*/
+
+
+/* entry */
+
+.entry {
+	position: relative;
+	margin-bottom: 3em;
+}
+
+.entry-header {
+	padding-bottom: .3em;
+	margin-bottom: 1em;
+	border-bottom: 3px double #ddd;
+	position: relative;
+}
+
+.entry-content p {
+	font-size: 16px;
+}
+
+/* date */
+
+.date {
+	margin-bottom: .5em;
+	font-size: .9rem;
+}
+
+.date a {
+	color: #999;
+	text-decoration: none;
+}
+
+.date a:hover {
+	text-decoration: underline;
+}
+
+
+/* 日付アイコン付き */
+
+.date a::before {
+	font-family: "blogicon";
+	content: "\f043";
+}
+
+.date a {
+	color: #333;
+	font-weight: bold;
+}
+
+.hyphen {
+	display: none;
+}
+
+.date-year::after {
+	content: ".";
+}
+
+.date-month::after {
+	content: ".";
+}
+
+.entry-title {
+	margin: 0 0 .3em;
+	font-size: 1.3rem;
+}
+
+@media (min-width: 1142px) {
+	.entry-title {
+		font-size: 1.4rem;
+	}
+}
+
+.categories {
+	margin: .5em 0;
+	font-size: .8rem;
+}
+
+.categories a {
+	margin-right: .5em;
+}
+
+
+/* 「編集する」ボタン */
+
+.entry-header-menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+/* 記事内の書式 */
+
+.entry-content img,
+.entry-content video {
+	max-width: 100%;
+	height: auto;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	margin: 1em 0 0.8em 0;
+}
+
+.entry-content h1 {
+	font-size: 1.5rem;
+}
+
+@media (min-width: 1142px) {
+	.entry-content h1 {
+		font-size: 1.7rem;
+	}
+}
+
+.entry-content h2 {
+	font-size: 1.4rem;
+}
+
+.entry-content h2 {
+	position: relative;
+	padding: 0.2em 0.5em;
+	border-left: 8px solid #ff9a9e;
+}
+
+@media (min-width: 1142px) {
+	.entry-content h2 {
+		font-size: 1.5rem;
+	}
+}
+
+.entry-content h3 {
+	font-size: 1.2rem;
+}
+
+.entry-content h3 {
+	padding: .5em 0 .5em .75em;
+	background: -moz-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: -webkit-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: linear-gradient(to right, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	/* 背景グラデーション */
+	color: #fff;
+}
+
+@media (min-width: 1142px) {
+	.entry-content h3 {
+		font-size: 1.3rem;
+	}
+}
+
+.entry-content h4 {
+	font-size: 1.1rem;
+}
+
+.entry-content h4 {
+	position: relative;
+	padding: .5em;
+	color: #ff9a9e;
+	border-top: 1px solid #ff9a9e;
+	border-bottom: 1px solid #ff9a9e;
+}
+
+.entry-content h5 {
+	font-size: 1rem;
+}
+
+.entry-content h5 {
+	position: relative;
+	padding: .5em;
+	color: #ff9a9e;
+	border-left: 4px solid #ff9a9e;
+}
+
+.entry-content h6 {
+	font-size: .9rem;
+}
+
+.entry-content ul,
+.entry-content ol,
+.entry-content dd {
+	margin: 0 0 1em 1.5em;
+	padding: 0;
+}
+
+.entry-content ul li ul,
+.entry-content ul li ol,
+.entry-content ol li ul,
+.entry-content ol li ol,
+.entry-content dd li ul,
+.entry-content dd li ol {
+	margin-bottom: 0;
+}
+
+.entry-content table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-bottom: 1em;
+	margin-bottom: 1em;
+	width: 100%;
+	overflow: auto;
+	display: block;
+	font-size: .8rem;
+}
+
+@media (min-width: 1142px) {
+	.entry-content table {
+		font-size: .9rem;
+	}
+}
+
+.entry-content table th,
+.entry-content table td {
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+}
+
+.entry-content table th {
+	background: #f5f5f5;
+}
+
+.entry-content blockquote {
+	border: 1px solid #ddd;
+	margin: 0 0 10px;
+	padding: 20px;
+}
+
+.entry-content blockquote p:first-of-type {
+margin-top: 0;
+}
+
+.entry-content blockquote p:last-of-type {
+margin-bottom: 0;
+}
+
+.entry-content pre,
+.entry-content code {
+	font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+}
+
+.entry-content pre {
+	background: #f5f5f5;
+	border: none;
+	white-space: pre-wrap;
+	text-overflow: ellipsis;
+	font-size: 100%;
+	line-height: 1.3;
+	font-size: .8rem;
+	padding: 10px;
+}
+
+.entry-content pre > code {
+	margin: 0;
+	padding: 0;
+	white-space: pre;
+	border: none;
+	background-color: transparent;
+	font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
+}
+
+.entry-content code {
+	font-size: 90%;
+	margin: 0 2px;
+	padding: 0px 5px;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+}
+
+.entry-content hr {
+	width: 50%;
+	border: 0;
+	border: none;
+	border-top: 1px solid #ddd;
+	margin: 2em auto;
+}
+
+.entry-content .table-of-contents {
+	padding: 1em 1em 1em 2em;
+	margin: 1em 0;
+	border: 1px solid #ddd;
+}
+
+
+/* 記事下 */
+
+.entry-footer .social-buttons {
+	margin-bottom: 1em;
+}
+
+.entry-footer-section {
+	color: #999;
+	font-size: .9rem;
+}
+
+.entry-footer-section a {
+	color: #999;
+}
+
+
+/* コメント */
+
+.comment-box {
+	margin: 1em 0;
+}
+
+.comment-box .comment {
+	list-style: none;
+	margin: 0 0 15px 0;
+	padding: 0;
+	line-height: 1.7;
+	font-size: .85rem;
+}
+
+@media (min-width: 768px) {
+	.comment-box .comment {
+		font-size: .9rem;
+	}
+}
+
+.comment-box .entry-comment {
+	padding: 10px 0 10px 60px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.comment-box .entry-comment:first-child {
+	border-top: 1px solid #ddd;
+}
+
+.comment-box .read-more-comments {
+	padding: 10px 0;
+}
+
+.comment-box .hatena-id-icon {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 50px !important;
+	height: 50px !important;
+	border-radius: 3px;
+}
+
+.comment-user-name {
+	margin: 0 0 .4em 0;
+	font-weight: bold;
+}
+
+.comment-content {
+	margin: 0 0 .4em 0;
+	word-wrap: break-word;
+	color: #454545;
+	font-size: .85rem;
+}
+
+.comment-content p {
+	margin: 0 0 .6em 0;
+}
+
+.comment-metadata {
+	color: #999;
+	margin: 0;
+	font-size: .8rem;
+}
+
+.comment-metadata a {
+	color: #999;
+}
+
+.leave-comment-title {
+	padding: .6em 1em;
+	font-size: .85rem;
+	border: 1px solid #ddd;
+}
+
+
+/* コメントを書く */
+
+.leave-comment-title {
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 0;
+  line-height: 20px;
+  color: #FF989E;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  background-clip: padding-box;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none !important;
+  font-weight: bold;
+  border: 1px solid #FF989E;
+}
+
+.leave-comment-title::before {
+	font-family: "blogicon";
+	content: "\f01d";
+	padding-right: 5px;
+}
+
+.leave-comment-title:hover {
+	background-color: #f5f5f5;
+	text-decoration: none !important;
+}
+
+
+/* Pager */
+
+.pager {
+	margin: 2em 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/*
+.pager a {
+    background-color: #FF989E;
+    color: #fff;
+}*/
+
+/* サイドバーモジュール */
+
+.hatena-module {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 2em;
+	font-size: .85rem;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+	.hatena-module {
+		font-size: .9rem;
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 6px;
+		margin-bottom: 3em;
+	}
+}
+
+@media (min-width: 1142px) {
+	.hatena-module {
+		font-size: .9rem;
+		background-color: #fff;
+		padding: 30px;
+		border-radius: 6px;
+		margin-bottom: 3em;
+	}
+}
+
+.hatena-module-title {
+	margin-bottom: .6em;
+	padding-bottom: .2em;
+	border-bottom: 3px double #ddd;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #FF989E;
+	text-align: center;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.hatena-module-title a {
+	color: #FF989E;
+	text-decoration: none;
+}
+
+.hatena-module-title a:hover {
+	text-decoration: underline;
+}
+
+
+/* Profile module */
+
+.hatena-module-profile .profile-icon {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.hatena-module-profile .id {
+	display: block;
+	font-weight: bold;
+	margin-bottom: .5em;
+}
+
+.hatena-module-profile .profile-description p {
+	margin-top: 0;
+}
+
+.prof-img {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+}
+
+
+/* urllist module */
+
+.hatena-urllist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.hatena-urllist li {
+	padding: .5em 0;
+}
+
+.hatena-urllist li:last-child {
+	padding-bottom: 0;
+}
+
+.hatena-urllist li a {
+	text-decoration: none;
+}
+
+.hatena-urllist li a:hover {
+	text-decoration: underline;
+}
+
+.hatena-urllist .urllist-category-link {
+	font-size: .7rem;
+	padding: .1em .3em;
+}
+
+.hatena-urllist .urllist-date-link a {
+	color: #999;
+}
+
+.hatena-urllist .urllist-entry-body {
+	margin-top: .3em;
+}
+
+
+/* Search module */
+
+.hatena-module-search-box .search-form {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.hatena-module-search-box .search-module-input {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0;
+	flex: 1 0;
+	padding: 5px;
+	color: #454545;
+	background: none;
+	border: none;
+	outline: none;
+	height: 20px;
+}
+
+.hatena-module-search-box .search-module-button {
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	background: transparent url("//blog.hatena.ne.jp/images/theme/search@2x.png") no-repeat center;
+	background-size: 20px 20px;
+	border: none;
+	outline: none;
+	color: transparent;
+	overflow: hidden;
+	opacity: .5;
+	cursor: pointer;
+}
+
+.hatena-module-search-box .search-module-button:hover {
+	opacity: .85;
+}
+
+
+/* サイドバーカテゴリーリスト */
+
+.hatena-module-category .hatena-urllist {
+	display: table;
+	width: 100%;
+}
+
+.hatena-module-category .hatena-urllist li {
+	display: table-cell;
+	margin-right: 12px;
+	float: left;
+}
+
+.hatena-module-category .hatena-urllist li a {
+	background: -moz-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: -webkit-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: linear-gradient(to right, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	border-radius: 12px;
+	padding: 5px 10px;
+	display: inline-block;
+	margin-right: 0;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/* About ページ */
+
+.page-about .entry-content dt {
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: .5em;
+}
+
+.page-about .entry-content dd {
+	margin-left: 0;
+	margin-bottom: 2em;
+}
+
+
+/* Archive */
+
+.archive-header-category {
+	text-align: center;
+}
+
+.page-archive .archive-entry {
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.3;
+	display: -webkit-flex;
+	display: flex;
+	/* 記事枠内横並び */
+}
+
+.page-archive .entry-title {
+	font-size: 1rem;
+}
+
+.page-archive .entry-thumb {
+	background-size: cover;
+	background-position: center center;
+}
+
+.page-archive .entry-description {
+	margin: 0;
+	font-size: .85rem;
+}
+
+.page-archive .social-buttons {
+	display: block;
+	margin-top: .3em;
+}
+
+.page-archive .archive-entry {
+	position: relative;
+	background-color: #fff;
+	border-radius: 6px;
+}
+
+.archive-entry-body {
+	display: none;
+}
+
+
+/* トップページ記事一覧レイアウト */
+
+.page-archive .entry-thumb {
+	width: 150px;
+	height: 150px;
+	background-size: cover;
+	/* 左上のみ角丸 */
+	border-top-left-radius: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	/* 左下のみ角丸 */
+	border-bottom-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	-webkit-order: 1;
+	order: 1;
+	margin-right: 0;
+}
+
+.page-archive .archive-entry {
+	height: 150px;
+}
+
+.archive-entry-header {
+	width: auto;
+	-webkit-order: 2;
+	order: 2;
+}
+
+.page-archive .date {
+	margin: .7rem .7em 0;
+}
+
+.page-archive .entry-title {
+	margin: .4rem .7rem;
+}
+
+
+@media (max-width: 360px) {
+	.page-archive .entry-thumb {
+		width: 120px;
+		height: 120px;
+	}
+
+	.page-archive .archive-entry {
+		height: 120px;
+	}
+
+	.entry-title {
+		font-size: 1.2rem;
+	}
+
+	.page-archive .entry-title {
+		font-size: .8rem;
+	}
+
+	.page-archive .categories a {
+		font-size: .7rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.page-archive .archive-entry {
+		height: 120px;
+	}
+
+	.page-archive .entry-thumb {
+		width: 120px;
+		height: 120px;
+	}
+
+	.entry-title {
+		font-size: 1.1rem;
+	}
+
+	.page-archive .entry-title {
+		font-size: .8rem;
+	}
+
+	.page-archive .categories a {
+		font-size: .7rem;
+	}
+
+	#content {
+		padding: 20px 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.page-archive .archive-entry {
+		height: 200px;
+	}
+
+	.page-archive .entry-thumb {
+		width: 200px;
+		height: 200px;
+		/* 左上のみ角丸 */
+		border-top-left-radius: 6px;
+		-webkit-border-top-left-radius: 6px;
+		-moz-border-radius-topleft: 6px;
+		/* 左下のみ角丸 */
+		border-bottom-left-radius: 6px;
+		-webkit-border-bottom-left-radius: 6px;
+		-moz-border-radius-bottomleft: 6px;
+	}
+
+	.page-archive .entry-title {
+		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: 1142px) {
+	.page-archive .archive-entry {
+		margin-bottom: 3em;
+		height: 200px;
+	}
+
+	.page-archive .entry-thumb {
+		width: 300px;
+		height: 200px;
+	}
+}
+
+/* カテゴリー */
+.categories a {
+	background: -moz-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: -webkit-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: linear-gradient(to right, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	/* 背景グラデーション */
+	border-radius: 12px;
+	padding: 5px 10px;
+	display: inline-block;
+	margin-right: 0;
+	color: #fff;
+	text-decoration: none;
+}
+
+.archive-entry .categories {
+	position: absolute;
+	bottom: 0;
+	right: 8px;
+	margin: .7rem;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.page-index .categories a {
+		display: none;
+	}
+
+	.page-index .categories a:first-child {
+		display: block;
+	}
+}
+
+/* 記事枠レイアウト */
+
+.page-entry #main {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 6px;
+	margin-bottom: 3rem;
+}
+
+@media (min-width: 1142px) {
+	.page-entry #main {
+		background-color: #fff;
+		padding: 30px;
+	}
+
+	.page-index .entry {
+		background-color: #fff;
+		padding: 30px;
+		border-radius: 6px;
+	}
+}
+
+.page-index .entry {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 6px;
+}
+
+@media (min-width: 1142px) {
+	.page-index .entry {
+		background-color: #fff;
+		padding: 30px;
+		border-radius: 6px;
+	}
+}
+
+/* 記事下関連記事モジュール */
+#entry-footer-secondary-modules .hatena-module {
+	padding: 0;
+}
+
+/*続きを読む*/
+
+a.entry-see-more {
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin: 20px auto;
+	line-height: 40px;
+	font-size: 16px;
+	position: relative;
+	background: -moz-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: -webkit-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	background: linear-gradient(to right, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
+	/* 背景グラデーション */
+	color: #fff;
+	border-radius: 6px;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+
+
+/*-------------------------------
+
+	フッター周り
+
+-------------------------------*/
+
+
+/* footer */
+
+#footer {
+	margin-top: 0;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	text-align: center;
+	font-size: .8rem;
+	color: #fff;
+	background: transparent;
+	/* 背景グラデーション */
+}
+
+#copyright a,
+#footer a {
+	color: #fff;
+}
+
+#footer p {
+	margin: .5em auto;
+}
+
+
+/* copyright */
+
+#copyright {
+	padding: 20px;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+
+
+/*-------------------------------
+
+	その他
+
+-------------------------------*/
+
+
+/* フォローボタン */
+
+ul.social-icon {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	list-style-type: none;
+	-webkit-padding-start: 0;
+	/* user agent stylesheet の無効化 */
+}
+
+.social-icon li a {
+	display: block;
+	margin: 0 5px 5px 0;
+	color: #fff;
+	width: 50px;
+	/* 丸ボタンの幅 */
+	height: 50px;
+	/* 丸ボタンの高さ */
+	line-height: 50px;
+	/* 高さに揃える */
+	border-radius: 50%;
+	text-align: center;
+}
+
+.social-icon .hatena {
+	background: #3d3f44;
+	color: #fff;
+}
+
+.social-icon .hatena .lg {
+	font-size: 1.3333333333333333em;
+	line-height: .75em;
+	vertical-align: -20%;
+}
+
+.social-icon .twitter {
+	background: #00a1e9;
+	color: #fff;
+}
+
+.social-icon .facebook {
+	background: #3b5998;
+	color: #fff;
+}
+
+
+/* シェアボタン */
+
+.sns-share {
+	background: #fff;
+}
+
+.sns-area li {
+	vertical-align: baseline;
+}
+
+.sns-area li a {
+	text-decoration: none;
+}
+
+.sns-area {
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px;
+	box-sizing: border-box;
+	display: -webkit-flex;
+	/* Safari */
+	display: flex;
+	-webkit-justify-content: space-around;
+	/* Safari */
+	justify-content: space-around;
+}
+
+.sns-area li {
+	list-style-type: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.sns-area li:last-child {
+	margin-right: 0
+}
+
+.sns-link {
+	height: 40px;
+	line-height: 40px;
+	overflow: visible;
+}
+
+.sns-twitter {
+	color: #FF989E;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	font-size: 40px;
+}
+
+.sns-facebook {
+	color: #FF989E;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	font-size: 40px;
+}
+
+.blogicon-bookmark.lg {
+	margin-top: -10px;
+}
+
+.sns-bookmark,
+a.sns-bookmark:visited {
+	color: #FF989E;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	font-size: 40px;
+}
+
+.sns-googleplus {
+	color: #FF989E;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	font-size: 40px;
+}
+
+.sns-pocket {
+	color: #FF989E;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	font-size: 40px;
+}
+
+.sns-line {
+	color: #FF989E;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	font-size: 40px;
+}
+
+.sns-line img {
+	position: relative;
+	top: 5px;
+}
+
+.blogicon-twitter,
+.blogicon-facebook,
+.blogicon-bookmark,
+.fa-google-plus,
+.blogicon-chevron-down {
+	margin-right: 5px;
+}
+
+a.sns-link:hover {
+	color: #FF989E;
+	opacity: 0.7;
+}
+
+.share-text {
+	padding-left: 4px;
+	font-size: 14px
+}
+
+.sns-txt {
+	font-size: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.share-text,
+	.sns-txt {
+		display: none;
+	}
+
+	.blogicon-twitter,
+	.blogicon-facebook,
+	.blogicon-bookmark,
+	.fa-google-plus,
+	.blogicon-chevron-down {
+		margin-right: 0;
+	}
+
+	.sns-area {
+		padding: 0;
+	}
+}
+
+
+/* フッターフォローボタン */
+
+.footer-follow-buttons {
+	text-align: center;
+	margin-top: 0;
+	width: 100%;
+}
+
+.footer-follow-buttons .follow-title {
+	width: 100%;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+.footer-follow-buttons a {
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px;
+}
+
+.footer-follow-buttons .inner-text {
+	font-size: 13px;
+	display: block;
+}
+
+.footer-follow-buttons .lg,
+.content-inner-follow-buttons .fa {
+	border-radius: 5px;
+	margin: 2px auto;
+}
+
+.footer-follow-buttons .hatena {
+	color: #fff;
+}
+
+.footer-follow-buttons .blogicon-hatenablog {
+	color: #fff;
+	font-size: 40px;
+}
+
+.footer-follow-buttons .blogicon-hatenablog:hover {
+	opacity: 0.8;
+}
+
+.footer-follow-buttons .facebook {
+	color: #fff;
+}
+
+.footer-follow-buttons .blogicon-facebook {
+	color: #fff;
+	font-size: 40px;
+}
+
+.footer-follow-buttons .blogicon-facebook:hover {
+	opacity: 0.8;
+}
+
+.footer-follow-buttons.twitter {
+	color: #fff;
+}
+
+.footer-follow-buttons .blogicon-twitter {
+	color: #fff;
+	font-size: 40px;
+}
+
+.footer-follow-buttons .blogicon-twitter:hover {
+	opacity: 0.8;
+}
+
+.footer-follow-buttons .instagram {
+	color: #fff;
+}
+
+.footer-follow-buttons .blogicon-instagram {
+	color: #fff;
+	font-size: 40px;
+}
+
+.footer-follow-buttons.blogicon-instagram:hover {
+	opacity: 0.8;
+}
+
+.footer-follow-buttons .feedly {
+	color: #fff;
+}
+
+.footer-follow-buttons .blogicon-rss {
+	color: #fff;
+	font-size: 40px;
+}
+
+.footer-follow-buttons .blogicon-rss:hover {
+	opacity: 0.8;
+}
+
+.footer-follow-buttons .googleplus {
+	color: #fff;
+}
+
+.footer-follow-buttons .fa-google-plus {
+	color: #fff;
+	font-size: 40%;
+}
+
+.footer-follow-buttons .fa-google-plus:hover {
+	opacity: 0.8;
+}
+
+@media (max-width: 1150px) and (min-width: 920px) {
+	.footer-follow-buttons a {
+		display: inline-block;
+		width: initial;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px;
+	}
+}
+
+
+/* サイドバーフォローボタン */
+
+.sidebar-follow-buttons {
+	text-align: center;
+	margin-top: 0;
+	width: 100%;
+}
+
+.sidebar-follow-buttons .follow-title {
+	width: 100%;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+.sidebar-follow-buttons a {
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px;
+}
+
+.sidebar-follow-buttons .inner-text {
+	font-size: 13px;
+	display: block;
+}
+
+.sidebar-follow-buttons .lg,
+.content-inner-follow-buttons .fa {
+	padding: 15px;
+	border-radius: 5px;
+	margin: 2px auto;
+}
+
+.sidebar-follow-buttons .hatena {
+	color: #38393C;
+	background-color: transparent;
+}
+
+.sidebar-follow-buttons .blogicon-hatenablog {
+	background: #38393C;
+	color: #ffffff;
+}
+
+.sidebar-follow-buttons .blogicon-hatenablog:hover {
+	background: #5F6063;
+}
+
+.sidebar-follow-buttons .facebook {
+	color: #305097;
+	background-color: transparent;
+}
+
+.sidebar-follow-buttons .blogicon-facebook {
+	background: #305097;
+	color: #ffffff;
+}
+
+.sidebar-follow-buttons .blogicon-facebook:hover {
+	background: #5A77B7;
+}
+
+.sidebar-follow-buttons .twitter {
+	color: #55acee;
+	background-color: transparent;
+}
+
+.sidebar-follow-buttons .blogicon-twitter {
+	background: #55acee;
+	color: #ffffff;
+}
+
+.sidebar-follow-buttons .blogicon-twitter:hover {
+	background: #89C7F7;
+}
+
+.sidebar-follow-buttons .instagram {
+	color: #3f729b;
+	background-color: transparent;
+}
+
+.sidebar-follow-buttons .blogicon-instagram {
+	background: #3f729b;
+	color: #ffffff;
+}
+
+.sidebar-follow-buttons .blogicon-instagram:hover {
+	background: #7AA5C7;
+}
+
+.sidebar-follow-buttons .feedly {
+	color: #6cc655;
+	background-color: transparent;
+}
+
+.sidebar-follow-buttons .blogicon-rss {
+	background: #6cc655;
+	color: #ffffff;
+}
+
+.sidebar-follow-buttons .blogicon-rss:hover {
+	background: #8EDC7A;
+}
+
+.sidebar-follow-buttons .googleplus {
+	color: #db4a39;
+	background-color: transparent;
+}
+
+.sidebar-follow-buttons .fa-google-plus {
+	background: #db4a39;
+	color: #ffffff;
+}
+
+.sidebar-follow-buttons .fa-google-plus:hover {
+	background: #e47365;
+}
+
+
+/*  Menu */
+
+#top-editarea {
+	margin-bottom: 0;
+}
+
+nav#slide-menu {
+	width: 100%;
+}
+
+nav#slide-menu ul {
+	list-style-type: none;
+	height: 44px;
+	width: 1142px;
+	margin: 0 auto;
+	padding: 0;
+	display: -webkit-flex;
+	/* Safari */
+	display: flex;
+	-webkit-justify-content: space-around;
+	/* Safari */
+	justify-content: space-around;
+}
+
+nav#slide-menu li {
+	width: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 44px;
+	height: 44px;
+}
+
+nav#slide-menu li a {
+	display: block;
+	margin: 0;
+	line-height: 44px;
+	height: 44px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav#slide-menu li:hover > a {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #fff;
+}
+
+nav#slide-menu li ul {
+	width: 200px;
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 9999;
+	visibility: hidden;
+}
+
+nav#slide-menu li ul li {
+	width: 200px;
+	height: 44px;
+	line-height: 44px;
+	color: #fff;
+	background: #D496A5;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	transition: .2s;
+}
+
+nav#slide-menu li ul li a {
+	line-height: 44px;
+	height: 44px;
+	background: #D496A5;
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	color: #fff;
+}
+
+nav#slide-menu li:hover ul {
+	overflow: visible;
+	background: #D496A5;
+	visibility: visible;
+	top: 44px;
+	width: 200px;
+	display: block;
+}
+
+div.menu-trigger {
+	display: none;
+}
+
+nav#slide-menu li a.menu-close {
+	display: none;
+}
+
+nav#slide-menu li:last-child {
+	display: none;
+}
+
+@media only screen and (max-width:1141px) {
+	nav#slide-menu {
+		overflow-x: hidden;
+		overflow-y: auto;
+		z-index: 20;
+		position: fixed;
+		top: 0;
+		left: -284px;
+		bottom: 0;
+		display: block;
+		float: left;
+		width: 100%;
+		max-width: 284px;
+		height: 100%;
+		-moz-transition: all 300ms;
+		-webkit-transition: all 300ms;
+		transition: all 300ms;
+		background: -moz-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+		background: -webkit-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+		background: linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+		/* 背景グラデーション2 */
+	}
+
+	nav#slide-menu ul {
+		position: static;
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		opacity: 0.5;
+		-moz-transition: all 300ms;
+		-webkit-transition: all 300ms;
+		transition: all 300ms;
+		width: 100%;
+		overflow: visible;
+	}
+
+	nav#slide-menu li {
+		width: 100%;
+		padding: 6px 0;
+		cursor: pointer;
+		display: block;
+		position: relative;
+		text-align: center;
+	}
+
+	nav#slide-menu li ul {
+		display: none;
+	}
+
+	nav#slide-menu li:hover ul {
+		display: none;
+	}
+
+	body.menu-active nav#slide-menu {
+		left: 0px;
+	}
+
+	body.menu-active nav#slide-menu ul {
+		left: 0px;
+		opacity: 1;
+	}
+
+	div.menu-trigger {
+		text-align: center;
+		display: block;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		width: 46px;
+		height: 46px;
+		line-height: 46px;
+		background: -moz-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+		background: -webkit-linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+		background: linear-gradient(45deg, #ff9a9e 0%, #f0b77f 99%, #fad0c4 100%);
+		/* 背景グラデーション2 */
+		color: #fff;
+		cursor: pointer;
+		border-radius: 50%;
+		-moz-transition: all 300ms;
+		-webkit-transition: all 300ms;
+		transition: all 300ms;
+		z-index: 1000;
+	}
+
+	nav#slide-menu li a.menu-close {
+		display: block;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		-moz-transition: all 300ms;
+		-webkit-transition: all 300ms;
+		transition: all 300ms;
+		margin: 0 auto;
+	}
+
+	nav#slide-menu li div.menu-close {
+		display: block;
+		color: #fff;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		-moz-transition: all 300ms;
+		-webkit-transition: all 300ms;
+		transition: all 300ms;
+		margin: 0 auto;
+	}
+
+	nav#slide-menu li:last-child {
+		display: block;
+	}
+}
+
+
+/* 目次 */
+
+.entry-content .table-of-contents {
+	border: 2px dashed #fff;
+	box-shadow: 0 0 0 10px #f6f6f6;
+	padding: 20px 10px 20px 40px;
+	list-style-type: decimal;
+	border-radius: 6px;
+	font-size: 90%;
+	background: #f6f6f6;
+	width: 88%;
+	margin: 3rem auto;
+}
+
+.entry-content .table-of-contents:before {
+	content: "目次";
+	font-size: 120%;
+	margin-left: -1em;
+	/* 目次を左にずらす */
+}
+
+.entry-content .table-of-contents li,
+.entry-content .table-of-contents ul {
+	list-style-type: decimal;
+}
+
+@media (max-width: 480px) {
+	.entry-content .table-of-contents {
+		width: 78%;
+	}
+}
+
+/* footer-ad */
+.adx-responsive-mode {
+	text-align: center;
+}
+
+/*sp padding */
+@media (max-width: 480px) {
+
+	.hatena-module,
+	.page-entry #main {
+		padding: 20px 10px;
+		/* 余白 上下 左右  */
+	}
+}
+
+/* ヘッダ、フッタ中央揃い */
+#top-editarea,
+#bottom-editarea {
+	text-align: center;
+}
+
+/* 画像はみ出し対策 */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* <system section="theme" selected="17391345971624603155"> */
 @import url("https://usercss.blog.st-hatena.com/-/theme/17391345971624603155.css?version=c60cdc5742b29bc53204de43fe4b6e157fa51a51");
 /* </system> */
