@@ -1,5 +1,5 @@
 /* <system section="theme" selected="17391345971624603155"> */
-@import url('https://fonts.googleapis.com/css2?family=M PLUS 1 Code:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M PLUS 2:wght@400;700&display=swap');
 @import url("https://usercss.blog.st-hatena.com/-/theme/17391345971624603155.css?version=c60cdc5742b29bc53204de43fe4b6e157fa51a51");
 /* </system> */
 
@@ -22,7 +22,7 @@
 body {
   font-display: swap;
   font-family:
-  'M PLUS 1 Code',
+  'M PLUS 2',
   'Yu Gothic Medium', /* Windows10以降・一番IBM Plex Sans JPに近い */
   'Yu Gothic',        /* Windows8.1以前 */
   'Hiragino Kaku Gothic ProN', /* Mac/iOS */
