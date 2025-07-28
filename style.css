@@ -22,6 +22,7 @@
 body {
   font-display: swap;
   font-family:
+  'IBM Plex Sans JP'
   'Yu Gothic Medium', /* Windows10以降・一番IBM Plex Sans JPに近い */
   'Yu Gothic',        /* Windows8.1以前 */
   'Hiragino Kaku Gothic ProN', /* Mac/iOS */
