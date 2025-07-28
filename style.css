@@ -6,6 +6,7 @@ Author: minimalgreen
 Author URI: https://blog.hatena.ne.jp/minimalgreen/
 */
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 /*
   Theme: haruni
@@ -68,11 +69,6 @@ html {
 /**
  * Remove the margin in all browsers (opinionated).
  */
-
-body {
-	margin: 0;
-}
-
 
 /**
  * Add the correct display in IE 9-.
@@ -370,11 +366,11 @@ select {
  */
 
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-	/* 2 */
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  appearance: button;         /* 標準（新しめのブラウザ） */
+  -webkit-appearance: button; /* WebKit系（Safari/iOS/古いChrome） */
 }
 
 
@@ -488,11 +484,10 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
-[type="search"] {
-	-webkit-appearance: textfield;
-	/* 1 */
-	outline-offset: -2px;
-	/* 2 */
+input[type="search"] {
+  appearance: textfield;        /* 標準プロパティ */
+  -webkit-appearance: textfield; /* Safari/iOS対応 */
+  outline-offset: -2px;
 }
 
 
@@ -589,9 +584,6 @@ body {
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic';
 	color: #454545;
 	line-height: 1.6;
-}
-
-body {
 	background: -moz-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
 	background: -webkit-linear-gradient(left, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
 	background: linear-gradient(to right, #ffb8bb 0%, #f0b77f 60%, #fad0c4 100%);
@@ -3491,7 +3483,6 @@ body {
   content:""; display:block; width:100%; height:100%; background:rgba(0,0,0,.3); opacity:0; transition:opacity 0.12s;
 }
 .page-archive .archive-entries .archive-entry:hover .entry-thumb::before { opacity:1; }
-.archive-entry-body { display:none; }
 img.hatena-fotolife { pointer-events: none; }
 .entry-content img { border-radius: 15px; }
 
