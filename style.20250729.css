@@ -2,49 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM Plex Sans JP:wght@400;700&display=swap');
 @import url("https://usercss.blog.st-hatena.com/-/theme/17391345971624603155.css?version=c60cdc5742b29bc53204de43fe4b6e157fa51a51");
 /* </system> */
-
 /* ===================== */
 /* === カラー変数定義 === */
 /* ===================== */
-:root {
-  --main-bg: #0a1e40;
-  --main-accent: #d4af37;
-  --text-dark: #333;
-  --text-muted: #555;
-  --link: #007acc;
-  --link-hover: #ff6600;
-  --profile-bg: #f8f9fa;
-}
-
 /* ========================= */
 /* === フォント/全体色 === */
 /* ========================= */
-body {
-  font-display: swap;
-  font-family:
-  'IBM Plex Sans JP',
-  'Yu Gothic Medium', /* Windows10以降・一番IBM Plex Sans JPに近い */
-  'Yu Gothic',        /* Windows8.1以前 */
-  'Hiragino Kaku Gothic ProN', /* Mac/iOS */
-  'Meiryo',           /* Windows標準 */
-  'sans-serif';
-}
-
 /* パンくず強調 */
-.breadcrumb, .breadcrumb a { font-weight: bold; color: #fff !important; }
-
 /* タイトル非表示 */
-#blog-title { display:none; }
-
 /* ===================== */
 /* === ロゴ＆ヘッダー === */
 /* ===================== */
-.tonari-title {
-  font-family: 'CorporateLogoMedium', sans-serif;
-  position: relative;
-  overflow: hidden;
-  font-size: 2.35em;
-}
 .tonari-title::after {
   content: "";
   position: absolute; top: 0; left: -75%;
@@ -67,13 +35,6 @@ body {
   45%{transform:scale(1.11) translate(-1px,1.5px);}
   60%{transform:scale(1.10) translate(1.5px,-2px);}
   100%{transform:scale(1.09) translate(0,0);}
-}
-.tonari-title a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  display: inline-block;
 }
 .tonari-animated {
   display: inline-block;
@@ -99,7 +60,6 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
 /* =========================== */
 /* === ロト種別丸アイコン行 === */
 /* =========================== */
@@ -159,14 +119,12 @@ body {
 .loto7-logo {
   background-image: url('https://cdn-ak.f.st-hatena.com/images/fotolife/n/numberhunter/20250622/20250622152723.png');
 }
-
 /* =============================== */
 /* === サイドバー/モジュール色 === */
 /* =============================== */
 .sidebar h3, .hatena-module-title, .hatena-module .module-title, .hatena-module-title a {
   color: #eb5030 !important;
 }
-
 /* サイドバー記事タイトル */
 .hatena-module ul li a, .hatena-module .urllist-title a {
   color: #2f3e51;
@@ -175,12 +133,10 @@ body {
 .hatena-module ul li a:hover, .hatena-module .urllist-title a:hover {
   color: #eb5030;
 }
-
 .hatena-module {
   padding-left:28px;
   padding-right: 28px;
 }
-
 /* ========================= */
 /* === 直近のロト結果ウィジェット === */
 /* ========================= */
@@ -202,7 +158,6 @@ body {
   border-top: 1.2px dotted #ffe099;
   margin: 15px 0 11px 0;
 }
-
 /* --- キャリーオーバー個別ボックス --- */
 .loto-carry-box {
   display: flex;
@@ -294,7 +249,6 @@ body {
   color: #36445c;
   font-weight: 500;
 }
-
 /* --- 最新結果セクション --- */
 .loto-result-title {
   font-weight: 900;
@@ -355,7 +309,6 @@ body {
   border-color: #ffd85c;
   color: #b97700;
 }
-
 @media (max-width: 550px) {
   .loto-latest-widget { padding: 9vw 0vw 4vw 0vw; }
   .loto-carry-box,
@@ -372,14 +325,12 @@ body {
     padding-right: 0;
   }
 }
-
 /* ===================== */
 /* === 本文スタイル  === */
 /* ===================== */
 .entry-content { font-size: 16px; line-height: 1.8; }
 .entry-content a { color: var(--link); text-decoration: underline; transition: color 0.2s; }
 .entry-content a:hover { color: var(--link-hover); }
-
 /* 記事更新日 */
 .update-notice {
   background: #fff7e6;
@@ -393,7 +344,6 @@ body {
   box-shadow: 0 1.5px 7px rgba(255,180,100,0.06);
   letter-spacing: 0.03em;
 }
-
 /* =============================== */
 /* === 本文見出し（h2-h5） === */
 /* =============================== */
@@ -412,7 +362,6 @@ body {
   z-index: 1;
   overflow: visible;
 }
-
 .entry-content h2::before {
   content: '';
   position: absolute;
@@ -428,7 +377,6 @@ body {
   pointer-events: none;
   box-shadow: inset -3px -3px 8px rgba(255, 255, 255, 0.3);
 }
-
 /* 🎯 白ハイライト艶 */
 .entry-content h2::after {
   content: '';
@@ -443,7 +391,6 @@ body {
   pointer-events: none;
   opacity: 1;
 }
-
 /* 色別ボール背景（透明色でグラデーション） */
 .entry-content h2[data-color="red"]::before {
   background: linear-gradient(160deg, rgba(228, 58, 48, 0.7), rgba(184, 28, 28, 0.7));
@@ -466,7 +413,6 @@ body {
 .entry-content h2[data-color="pink"]::before {
   background: linear-gradient(160deg, rgba(255, 102, 170, 0.7), rgba(204, 74, 136, 0.7));
 }
-
 @media (max-width: 600px) {
   .entry-content h2 {
     font-size: 1.5em;
@@ -477,7 +423,6 @@ body {
     height: 1.7em;
   }
 }
-
 /* h3: カード風/ドット付 */
 .entry-content h3 {
   display: flex; align-items: center;
@@ -504,7 +449,6 @@ body {
   border-left: 4px solid #e57373; border-radius: 5px; margin: 1em 0;
   box-shadow: 0 1px 5px rgba(229,115,115,0.04);
 }
-
 /* =============================== */
 /* === TOPメニュー（ヘッダー） === */
 /* =============================== */
@@ -558,11 +502,9 @@ body {
   display: flex;
   gap: 20px;
 }
-
 .parent-cat {
   position: relative;
 }
-
 .child-cat-menu {
   display: none;
   position: absolute;
@@ -574,12 +516,10 @@ body {
   min-width: 130px;
   z-index: 999;
 }
-
 .parent-cat:hover .child-cat-menu,
 .parent-cat:focus-within .child-cat-menu {
   display: block;
 }
-
 .child-cat-link {
   display: block;
   padding: 8px 16px;
@@ -587,11 +527,9 @@ body {
   text-decoration: none;
   white-space: nowrap;
 }
-
 .child-cat-link:hover {
   background: #ffe0c0;
 }
-
 .logo-lotto-ball-link {
   display: flex;
   align-items: center;
@@ -601,7 +539,6 @@ body {
   color: #444;
   text-decoration: none;
 }
-
 /* =============================== */
 /* === プロフィールボックス共通 === */
 /* =============================== */
@@ -700,14 +637,12 @@ body {
 .hatebu { background: #00A4DE; }
 .x      { background: #000; }
 .rss    { background: #FFA500; }
-
 @media (max-width: 700px) {
   .custom-profile { flex-direction: column; align-items: center; gap: 9px; }
   .profile-img { margin-bottom: 5px; }
   .profile-info { width: 100%; }
   .profile-buttons { justify-content: center; }
 }
-
 /* =============================== */
 /* === フッター・ページトップ === */
 /* =============================== */
@@ -745,7 +680,6 @@ body {
   pointer-events: none;
   display: block;
 }
-
 /* =============================== */
 /* === ロトボール 共通（各所）=== */
 /* =============================== */
@@ -795,7 +729,6 @@ body {
   pointer-events: none;
   filter: blur(0.5px);
 }
-
 /* 色バリエーション：各所統一 */
 .loto-ball-red    { background-color: #e74c3c !important; }
 .loto-ball-orange { background-color: #f39c12 !important; }
@@ -804,7 +737,6 @@ body {
 .loto-ball-blue   { background-color: #3498db !important; }
 .loto-ball-purple { background-color: #9b59b6 !important; }
 .loto-ball-pink   { background-color: #e91e63 !important; }
-
 .loto-date-month,
 .loto-date-year {
   display: block;
@@ -830,7 +762,6 @@ body {
   font-size: 1em;
   letter-spacing: 0.02em;
 }
-
 /* ======================== */
 /* ===== メディアクエリ ==== */
 /* ======================== */
@@ -864,7 +795,6 @@ body {
   .ad-pc { display: block !important; }
   .ad-sp { display: none !important; }
 }
-
 /* ====================================== */
 /* === 最新記事・注目記事モジュール === */
 /* ====================================== */
@@ -873,7 +803,6 @@ body {
 .urllist-with-thumbnails li:nth-child(2n){margin-left:10px;}
 .urllist-with-thumbnails li .urllist-title { font-size:15px; font-weight:bold; line-height:1.4; }
 .urllist-with-thumbnails li .urllist-image { margin:0 0 4px; border-radius:8px; overflow:hidden; }
-
 /* ====================================== */
 /* === シンプルなデザイン/アーカイブ === */
 /* ====================================== */
@@ -903,10 +832,9 @@ body {
   content:""; display:block; width:100%; height:100%; background:rgba(0,0,0,.3); opacity:0; transition:opacity 0.12s;
 }
 .page-archive .archive-entries .archive-entry:hover .entry-thumb::before { opacity:1; }
-.archive-entry-body { display:none; }
+.archive-entry-
 img.hatena-fotolife { pointer-events: none; }
 .entry-content img { border-radius: 15px; }
-
 .user-name-nickname {
   display: inline-flex;
   align-items: center;
@@ -919,7 +847,6 @@ img.hatena-fotolife { pointer-events: none; }
   gap: 0.20em;
   position: relative;
 }
-
 /* X認証バッジ（SVG埋め込み／アップ画像をトレース） */
 .user-name-nickname::after {
   content: "";
@@ -933,13 +860,11 @@ img.hatena-fotolife { pointer-events: none; }
   /* または transform: translateY(-4px); などでもOK */
   vertical-align: baseline;
 }
-
 /* hatenaID・カッコを非表示 */
 .user-name-hatena-id,
 .user-name-paren {
   display: none !important;
 }
-
 /* 「Written by」ラベル追加 */
 .user-name-nickname::before {
   content: "Written by ";
@@ -973,7 +898,6 @@ img.hatena-fotolife { pointer-events: none; }
 .entry-content .table-of-contents li ul li ul li { font-size:90%;}
 .entry-content .table-of-contents a { color:#70442c; line-height:1.6em; text-decoration:underline; transition:color 0.2s;}
 .entry-content .table-of-contents a:hover { color:#a65b3b; }
-
 /* ====================================== */
 /* === カテゴリバッジ／記事タイトルグラデ === */
 /* ====================================== */
@@ -1011,7 +935,6 @@ img.hatena-fotolife { pointer-events: none; }
     background-clip: initial !important;
   }
 }
-
 /* ============================= */
 /* === 検索フォームデザイン === */
 /* ============================= */
@@ -1042,13 +965,11 @@ img.hatena-fotolife { pointer-events: none; }
   box-shadow:0 4px 16px rgba(235,80,48,0.11);
 }
 .tonari-btn svg { width:26px; height:26px; display:block; }
-
 /* Google検索結果ハイライト色 */
 .page-archive span.highlight {
   background:rgba(255,241,106,0.5); border-radius:6px; padding:0 8px;
   color:#d25300; font-weight:bold; box-shadow:0 1px 4px rgba(240,180,0,0.07); display:inline-block;
 }
-
 /* ============================= */
 /* ====== テーブルデザイン ===== */
 /* ============================= */
@@ -1069,20 +990,17 @@ img.hatena-fotolife { pointer-events: none; }
   border: 1px solid #ddd;
   vertical-align: top;
 }
-
 /* ---- 折り返しさせたくない列 ---- */
 .tonari-prediction-table .nowrap {
   white-space: nowrap;
   width: 1%;
 }
-
 /* ---- “特徴と狙い”は残り全部 ---- */
 .tonari-prediction-table .feature {
   width: auto;
   word-break: break-all;
   /* 任意：見やすくするためにline-height調整してもOK */
 }
-
 /* ---- PCではスクロールさせない ---- */
 @media (min-width: 800px) {
   .tonari-prediction-table-wrap {
@@ -1093,7 +1011,6 @@ img.hatena-fotolife { pointer-events: none; }
     max-width: 100%;
   }
 }
-
 /* ============================= */
 /* ========= 相互リンク ======== */
 /* ============================= */
@@ -1104,7 +1021,6 @@ img.hatena-fotolife { pointer-events: none; }
   max-width: 700px;
   margin: 0 auto;
 }
-
 .mutual-links-title {
   font-size: 2em;
   color: #333;
@@ -1114,17 +1030,14 @@ img.hatena-fotolife { pointer-events: none; }
   padding-left: 0.6em;
   letter-spacing: 0.05em;
 }
-
 .mutual-links-desc {
   font-size: 1.1em;
   color: #333;
   margin-bottom: 1.5em;
 }
-
 .mutual-links-list {
   margin-bottom: 2em;
 }
-
 .mutual-link-item {
   background: #fff7e6;
   border-radius: 9px;
@@ -1132,20 +1045,17 @@ img.hatena-fotolife { pointer-events: none; }
   margin-bottom: 1.1em;
   padding: 1em 1.2em;
 }
-
 .mutual-link-name {
   font-weight: bold;
   color: #214c7e;
   font-size: 1.13em;
   text-decoration: underline dotted #c9a45a;
 }
-
 .mutual-link-desc {
   color: #432;
   font-size: 0.97em;
   margin-top: 0.3em;
 }
-
 .mutual-links-contact {
   background: #fff7e6;
   border-radius: 9px;
@@ -1153,7 +1063,6 @@ img.hatena-fotolife { pointer-events: none; }
   text-align: center;
   font-weight: bold;
 }
-
 .mutual-links-contact a {
   color: #bc7816;
   text-decoration: underline;
