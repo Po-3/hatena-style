@@ -1,5 +1,2 @@
-/common.js
-  Cache-Control: public, max-age=31536000, immutable
-
-/hatena-style/IBMPlexSansJP-*.woff
+/hatena-style/style.20250809.css
   Cache-Control: public, max-age=31536000, immutable
