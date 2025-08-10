@@ -11,7 +11,6 @@
 /* ===================== */
 /* === カラー変数定義 === */
 /* ===================== */
-/* head要素に移管
 :root {
   --main-bg: #0a1e40;
   --main-accent: #d4af37;
@@ -21,14 +20,21 @@
   --link-hover: #ff6600;
   --profile-bg: #f8f9fa;
 }
-*/
 
 /* ========================= */
 /* === フォント/全体色 === */
 /* ========================= */
-/* head要素に移管 */
+@font-face{
+  font-family:"IBMPlexSansJP";
+  src:url("https://profound-fox-186ed7.netlify.app/hatena-style/IBMPlexSansJP-Regular.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap
+}
+@font-face{
+  font-family:"IBMPlexSansJP";
+  src:url("https://profound-fox-186ed7.netlify.app/hatena-style/IBMPlexSansJP-Bold.woff2") format("woff2");
+  font-weight:700;font-style:normal;font-display:swap
+}
 
-/* head要素に移管
 body {
   font-family:
     'IBM Plex Sans JP',
@@ -38,7 +44,6 @@ body {
     'Meiryo',
     sans-serif;
 }
- */
 
 /* ===================== */
 /* === ロゴ＆ヘッダー === */
