@@ -1,12 +1,6 @@
 /* <system section="theme" selected="17391345971624603155"> */
-@import url("https://usercss.blog.st-hatena.com/-/theme/17391345971624603155.css?version=c60cdc5742b29bc53204de43fe4b6e157fa51a51");
+@import url("https://profound-fox-186ed7.netlify.app/hatena-style/theme-no-gfonts.css");
 /* </system> */
-
-/* パンくず強調 */
-.breadcrumb, .breadcrumb a { font-weight: bold; color: #fff !important; }
-
-/* タイトル非表示 */
-#blog-title { display:none; }
 
 /* ===================== */
 /* === カラー変数定義 === */
@@ -37,13 +31,19 @@
 
 body {
   font-family:
-    'IBM Plex Sans JP',
+    'IBMPlexSansJP',
     'Yu Gothic Medium',
     'Yu Gothic',
     'Hiragino Kaku Gothic ProN',
     'Meiryo',
     sans-serif;
 }
+
+/* パンくず強調 */
+.breadcrumb, .breadcrumb a { font-weight: bold; color: #fff !important; }
+
+/* タイトル非表示 */
+#blog-title { display:none; }
 
 /* ===================== */
 /* === ロゴ＆ヘッダー === */
