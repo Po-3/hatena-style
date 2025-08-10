@@ -2,6 +2,12 @@
 @import url("https://usercss.blog.st-hatena.com/-/theme/17391345971624603155.css?version=c60cdc5742b29bc53204de43fe4b6e157fa51a51");
 /* </system> */
 
+/* パンくず強調 */
+.breadcrumb, .breadcrumb a { font-weight: bold; color: #fff !important; }
+
+/* タイトル非表示 */
+#blog-title { display:none; }
+
 /* ===================== */
 /* === カラー変数定義 === */
 /* ===================== */
@@ -33,12 +39,6 @@ body {
     sans-serif;
 }
  */
-
-/* パンくず強調 */
-.breadcrumb, .breadcrumb a { font-weight: bold; color: #fff !important; }
-
-/* タイトル非表示 */
-#blog-title { display:none; }
 
 /* ===================== */
 /* === ロゴ＆ヘッダー === */
